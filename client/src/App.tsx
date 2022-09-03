@@ -4,9 +4,9 @@ const INITIAL_GAME_STATE: number[] = [];
 const URLapi = "http://localhost:3000/game-result";
 
 function App() {
-  const [namePlayer1, setNamePlayer1] = useState("Samy");
+  const [namePlayer1, setNamePlayer1] = useState("");
   const [levelPlayer1, setLevelPlayer1] = useState(1);
-  const [namePlayer2, setNamePlayer2] = useState("Krazz");
+  const [namePlayer2, setNamePlayer2] = useState("");
   const [levelPlayer2, setLevelPlayer2] = useState(1);
   const [results, setResults] = useState([]);
 

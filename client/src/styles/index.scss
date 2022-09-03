@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+
+* {
+    margin: 0;
+    font-family: "Roboto";
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+}
+
+:root {
+    --integrationPurple: #857ef0;
+    --integrationGrey: rgb(150, 150, 150);
+}
+
+.App {
+    min-height: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    width: 100%;
+    padding: 3em 0;
+
+    button {
+        border: none;
+        background-color: var(--integrationPurple);
+        color: white;
+        padding: 0.2em 0.5em;
+        font-size: 18px;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+
+    .form-container {
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 6%);
+        padding: 1em;
+        transition: all 0.3s ease-in-out;
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            label {
+                color: var(--integrationPurple);
+            }
+
+            input,
+            select {
+                font-size: 18px;
+                padding: 0.2em 0.2em;
+                border: none;
+                outline: none;
+                box-shadow: 0px 0px 1px 1px #c5c1ff;
+                transition: all 0.3s ease-in-out;
+
+                &:hover,
+                &:focus {
+                    box-shadow: 0px 0px 1px 1px var(--integrationPurple);
+                }
+            }
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.221);
+        }
+    }
+
+    .game-generator {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 400px;
+        gap: 1em;
+        box-shadow: 0px 0px 1px 1px rgb(0 0 0 / 6%);
+        padding: 1em;
+        border-radius: 15px;
+        transition: all 0.3s ease-in-out;
+
+        .points-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: scroll;
+            max-height: 300px;
+            width: 100%;
+        }
+
+        &:hover {
+            box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.221);
+        }
+    }
+
+    .sets-results {
+        .sets-container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+
+                :nth-child(1) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

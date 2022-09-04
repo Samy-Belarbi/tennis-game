@@ -1,11 +1,14 @@
+const path = require("path");
 const express = require("express"); // Importer Express
 const cors = require("cors"); // Pour contourner le CORS POLICY
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 
 app.use(express.json());
 app.use(cors()); // CORS POLICY
+
+app.use(express.static(path.join(__dirname, "dist")));
 
 app.post("/game-result", (req, res) => {
   const results = getResults(req.body);

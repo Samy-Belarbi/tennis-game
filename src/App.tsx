@@ -225,8 +225,12 @@ function App() {
         ""
       )}
 
-      {results.length > 1 ? <div>{displayWinner()}</div> : ""}
-      {results.length > 1 ? (
+      {results.length > 1 && namePlayer1 && namePlayer2 ? (
+        <div>{displayWinner()}</div>
+      ) : (
+        ""
+      )}
+      {results.length > 1 && namePlayer1 && namePlayer2 ? (
         <div className="sets-results">{displayScores()}</div>
       ) : (
         ""

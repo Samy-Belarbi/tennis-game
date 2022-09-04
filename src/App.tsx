@@ -219,7 +219,7 @@ function App() {
       )}
 
       {/* Récupération des résultats finaux qui s'affiche uniquement si l'on a déjà lancé la partie */}
-      {gameState.length > 1 ? (
+      {gameState.length > 1 && namePlayer1 && namePlayer2 ? (
         <button onClick={getResults}>Récupérer les résultats</button>
       ) : (
         ""

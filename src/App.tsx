@@ -81,7 +81,6 @@ function App() {
       }
 
       if (result > 3 && max === levelPlayer2) {
-        console.log(result);
         return 2;
       }
 
